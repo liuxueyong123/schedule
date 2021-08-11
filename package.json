@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "start": "ts-node index.ts",
-    "alert-dinner": "ts-node ./scripts/alertDinner.ts"
+    "alert-dinner": "ts-node ./scripts/alertDinner.ts",
+    "push-online": "ssh root@106.15.170.172 \"cd ./application/schedule/; git pull; yarn; tsc; pm2 reload schedule\""
   },
   "dependencies": {
     "axios": "^0.21.1",
